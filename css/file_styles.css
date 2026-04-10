@@ -1,3 +1,15 @@
+/* Fixed footer for all pages */
+.footer,
+.footer-fixed {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background: rgba(93, 20, 20, 0.779);
+  color: white;
+  font-size: 18px;
+  z-index: 9999;
+}
 @import url('https://cdn.jsdelivr.net/npm/bootstrap-icons@1.12.1/font/bootstrap-icons.min.css');
 
 body,
@@ -6,21 +18,27 @@ html {
   padding: 0;
   height: 100%;
   font-family: 'Segoe UI', sans-serif;
-  background-color: #e2e2f5;
+  background-color: #1c1212;
 }
 
 .design-card {
   padding-top: 15px;
-  background-color: rgba(255, 255, 255, 0.422);
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  background: rgba(0, 0, 0, 0.42);
+  box-shadow: 0 4px 32px 0 rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(7px);
+  border-radius: 16px;
+  color: #8f1f1f;
   transition: transform 0.3s ease;
 }
 
-.design-card:hover {
-  background-color: rgba(255, 255, 255, 0.628);
-  transform: scale(1.05);
-}
-
+  .skills-title {
+    color: #fff;
+    font-family: 'Pixelify Sans', sans-serif;
+    margin-bottom: 20px;
+    text-align: center;
+    width: 100%;
+    display: block;
+  }
 .design-text {
   padding: 25px;
   background-color: rgba(255, 255, 255, 0.628);
@@ -35,22 +53,180 @@ html {
 }
 
 body {
-  background-image: url('../img/bggg.png'),
-    linear-gradient(
-      180deg,
-      rgba(100, 100, 253, 0.594) 100%,
-      rgba(255, 255, 255, 0) 60%
-    ),
-    url('../img/bg_main_ver2.png'),
-    linear-gradient(180deg, rgba(27, 13, 158, 0) 10%, rgb(125, 121, 169) 100%);
+  background-image:
+    linear-gradient(to bottom, rgba(0, 0, 0, 0.84) 0%, rgba(0, 0, 0, 0.95) 100%),
+    url('../img/bg_main_ver2.png');
 
-  background-size: 1600px 700px, 100% 100%, 1900px, 100% 100%;
-  background-repeat: repeat, repeat, repeat;
-  background-position: 50% 70%, top left, 50% 20%, top left;
+  background-size: 100% 100%, 100% 100%;
+  background-attachment: fixed, fixed;
+  background-repeat: no-repeat, repeat;
+  background-position: top left, top left;
 }
+
+.icon-bar {
+  background-color: #000000a3;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 6px 16px;
+  font-size: 17px;
+  color: rgba(255, 106, 106, 0.6);
+}
+
+.divider {
+  background-color: #000000a3;
+  display: flex;
+  margin-bottom: 20px;
+  align-items: center;
+  gap: 14px;
+  padding: 25px 16px;
+  font-size: 14px;
+  color: rgba(255, 106, 106, 0.6);
+}
+
+
+
 
 .gallery-section {
   margin-top: 140px;
+}
+
+.project-masonry {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-auto-rows: 280px;
+  gap: 20px;
+}
+
+.project-item {
+  position: relative;
+  overflow: hidden;
+  border-radius: 16px;
+  background: rgba(0, 0, 0, 0.42);
+  box-shadow: 0 4px 32px 0 rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(7px);
+}
+
+.project-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 16px;
+  display: block;
+  transition: opacity 0.3s ease;
+}
+
+.project-item:hover img {
+  opacity: 0.25;
+}
+
+.project-large {
+  grid-column: span 1;
+  grid-row: span 1;
+}
+
+.project-overlay {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 24px;
+  color: #ffe7e7d3;
+  opacity: 0;
+  transition: opacity 0.6s ease;
+}
+
+.project-item:hover .project-overlay {
+  opacity: 1;
+}
+
+/*button override */
+.project-overlay .btn-outline-light {
+  background: rgba(136, 1, 1, 0.1);
+  border: 1px solid rgba(171, 0, 0, 0.4);
+  color: #e14e4e;
+  border-radius: 20px;
+  padding: 4px 16px;
+  font-size: 25px;
+  backdrop-filter: blur(4px);
+  transition: background 0.2s, border-color 0.2s;
+  align-self: flex-start;
+}
+
+.project-overlay .btn-outline-light:hover {
+  background: rgba(135, 3, 3, 0.25);
+  border-color: #904141;
+  color: #901c1c;
+}
+
+.skills-section {
+  margin-top: 40px;
+}
+
+.section-title {
+  color: #fff;
+  font-family: 'Pixelify Sans', sans-serif;
+  margin-bottom: 20px;
+  text-align: center;
+  width: 100%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Ensure parent containers do not override centering */
+.skills-section, .pb-5, .px-4 {
+  text-align: center;
+}
+
+.skills-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+.skill-icon {
+  position: relative;
+  width: 60px;
+  height: 60px;
+  background: rgba(0, 0, 0, 0.42);
+  box-shadow: 0 4px 32px 0 rgba(0,0,0,0.5);
+  backdrop-filter: blur(7px);
+  border-radius: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 28px;
+  color: #fff;
+  cursor: default;
+  transition: background 0.2s, transform 0.2s;
+}
+
+.skill-icon:hover {
+  background: rgba(255,255,255,0.15);
+  transform: translateY(-4px);
+}
+
+.skill-icon::after {
+  content: attr(data-label);
+  position: absolute;
+  bottom: calc(100% + 8px);
+  left: 50%;
+  transform: translateX(-50%);
+  background: rgba(0,0,0,0.85);
+  color: #fff;
+  font-size: 12px;
+  padding: 3px 8px;
+  border-radius: 6px;
+  white-space: nowrap;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.2s;
+}
+
+.skill-icon:hover::after {
+  opacity: 1;
 }
 
 @media (max-width: 990px) {
@@ -66,3 +242,4 @@ body {
     right: 200px;
   }
 }
+

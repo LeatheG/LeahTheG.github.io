@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/hover.css/2.3.1/css/hover-min.css">
     <link rel="stylesheet" href="css/styles.css" />
     <link rel="stylesheet" href="css/file_styles.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Pixelify+Sans&display=swap" rel="stylesheet">
   </head>
   <div class="desktop">
     <body>
@@ -17,7 +18,7 @@
             <div class="container">
   
               <a href="index.html" class="navbar-text ms-2" style="text-decoration: none;">
-                <i class="bi bi-star-fill" style="font-size: 20px; color: #D6D6FF;"> Lea Goretoy</i>
+                <i class="bi bi-star-fill" style="font-size: 20px; color: #ffd6d6;"> Lea Goretoy</i>
               </a>
   
               <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
@@ -30,7 +31,6 @@
                   <a class="nav-link hvr-bob" href="js_projects.html">JavaScript</a>
                   <a class="nav-link hvr-bob" href="css_projects.html">Css</a>
                   <a class="nav-link hvr-bob" href="skills.html">Skills</a>
-                  <a class="nav-link hvr-bob" href="contact.html">Contact</a>
                   <a class="nav-link hvr-bob" href="art.html">Art</a>
                 </div>
               </div>
@@ -42,75 +42,125 @@
               </span>
             </div>
           </nav>
+          <div class="icon-bar">
+            <i class="bi bi-house"></i>
+            <i class="bi bi-folder"></i>
+            <i class="bi bi-star"></i>
+          </div>
           <button 
             onclick="window.location.href='index.html'" 
                 class="btn close-btn">
-                ↩
+                <i class="bi bi-x-circle-fill"></i>
           </button>
-          <br>
-          <h2 class="text-center my-5">CSS Projects!</h2>
-      <main>
-        <div class="container gallery-section d-flex justify-content-center mt-0 pt-0">
-          <div class="row justify-content-center g-4 gallery-row">
-            <div class="col-12 col-sm-6 col-lg-4 px-5 mb-4 mb-lg-0 design-card rounded-5 hvr-bob">
-                <div class="lc-block mb-3">
-                  <img class="img-fluid" src="https://i.imgur.com/Dy6TSPh.png" alt="Podcast/Radio show" loading="lazy">
-                </div>
-                <div class="lc-block text-center mb-3">
-                    <div editable="rich">
-                        <h3 class="fw-light">Call In!</h3>
-                    </div>
-                </div>
-                <div class="lc-block text-center mb-4">
-                    <div editable="rich">
-                        <p class="small text-muted">Podcast/Radio show webpage made for SWDV 143</p>
-                    </div>
-                </div>
-                <div class="lc-block text-center">
-                    <a class="btn btn-link" href="https://stackblitz.com/edit/stackblitz-starters-lk9drkcx?embed=1&file=package.json&theme=dark&view=preview" role="button">Show Me</a>
-                </div>
+      
+      <main class="pb-5">
+      <div class="px-4 pb-5">
+      <h2 class="section-title">Projects</h2>
+        <div class="project-masonry py-4 px-4">
+
+          <div class="project-item project-large">
+            <img src="img/project_imgs/callin.png" alt="Call In!">
+            <div class="project-overlay">
+              <h3>Call In!</h3>
+              <p>Javascript Website</p>
             </div>
-              <div class="col-12 col-sm-6 col-lg-4 px-5 mb-4 mb-lg-0 design-card rounded-5 hvr-bob">
-                  <div class="lc-block mb-3">
-                    <img class="img-fluid" src="https://i.imgur.com/n2i4i1O.png" alt="Car dealership" loading="lazy">
-                  </div>
-                  <div class="lc-block text-center mb-3">
-                      <div editable="rich">
-                          <h3 class="fw-light">All-Star Cars</h3>
-                      </div>
-                      
-                  </div>
-                  <div class="lc-block text-center mb-4">
-                      <div editable="rich">
-                          <p class="small text-muted">Car dealership page made for SWDV 143</p>
-                      </div>
-                  </div>
-                  <div class="lc-block text-center">
-                      <a class="btn btn-link" target="_blank" href="https://stackblitz.com/edit/stackblitz-starters-c71styky?embed=1&file=package.json&theme=dark&view=preview" role="button">Show Me</a>
-                  </div>
-              </div>
-              <div class="col-12 col-sm-6 col-lg-4 px-5 mb-4 mb-lg-0 design-card rounded-5 hvr-bob">
-                  <div class="lc-block mb-3">
-                    <img class="img-fluid" src="https://i.imgur.com/LHzIBBw.png" alt="Old Portfolio" loading="lazy">
-                  </div>
-                  <div class="lc-block text-center mb-3">
-                      <div editable="rich">
-                          <h3 class="fw-light">Old Portfolio</h3>
-                      </div>
-                  </div>
-                  <div class="lc-block text-center mb-4">
-                      <div editable="rich">
-                          <p class="small text-muted"> Portfolio project created last semester for SWDV 115</p>
-                      </div>
-                  </div>
-                  <div class="lc-block text-center">
-                  <a class="btn btn-link" target="_blank" href="https://github.com/LeatheG/LeatheG.github.io/tree/main/LGPortfolio" role="button">Show Me</a>
-                  </div>
-              </div>
+          </div>
+
+          <div class="project-item project-large">
+            <img src="img/project_imgs/blitz.png" alt="Blitz Energy">
+            <div class="project-overlay">
+              <h3>Blitz Energy</h3>
+              <p>Node.JS Website</p>
+            </div>
+          </div>
+          <div class="project-item project-large">
+            <img src="img/project_imgs/figma.png" alt="Figma Project">
+            <div class="project-overlay">
+              <h3>Mock App Design</h3>
+              <p>Figma Wireframe for a mobile tutor app</p>
+            </div>
+          </div>
+
+          <div class="project-item project-large">
+            <img src="img/project_imgs/allstar.png" alt="All-Star Cars">
+            <div class="project-overlay">
+              <h3>All-Star Cars</h3>
+              <p>Bootstrap Car dealership Website</p>
+            </div>
+          </div>
+
+          <div class="project-item project-large">
+            <img src="img/project_imgs/mspaint.png" alt="Comix">
+            <div class="project-overlay">
+              <h3>MS_Paint Comix</h3>
+              <p>Vue.js Website</p>
+            </div>
+          </div>
+
+          <div class="project-item project-large">
+            <img src="img/project_imgs/oldportfolio.png" alt="Old Portfolio">
+            <div class="project-overlay">
+              <h3>First Semester Portfolio</h3>
+              <p>Vanilla HTML Website</p>
+            </div>
+          </div>
+
+          <div class="project-item project-large">
+            <img src="img/project_imgs/python.png" alt="Python Project">
+            <div class="project-overlay">
+              <h3>Flower Power</h3>
+              <p>Python Project</p>
+            </div>
+          </div>
+
+          <div class="project-item project-large">
+            <img src="img/project_imgs/rateitor.png" alt="Rate It Or Hate It Project">
+            <div class="project-overlay">
+              <h3>Rate It Or Hate It</h3>
+              <p>HTML and CSS Website</p>
+            </div>
+          </div>
+          <div class="project-item project-large">
+            <img src="img/project_imgs/rentadawg.png" alt="Rent A Dawg Project">
+            <div class="project-overlay">
+              <h3>Rent A Dawg</h3>
+              <p>HTML and CSS Website</p>
+            </div>
           </div>
         </div>
-        </body>
-      </main> 
+        <div class="icon-bar"></div>
+
+        <!-- Skills section -->
+        <div class="skills-section pb-5" id="skills">
+          <h2 class="section-title">Skills</h2>
+          <div class="skills-grid">
+            <div class="skill-icon" data-label="HTML"><i class="bi bi-filetype-html"></i></div>
+            <div class="skill-icon" data-label="SQL"><i class="bi bi-filetype-sql"></i></div>
+            <div class="skill-icon" data-label="CSS"><i class="bi bi-filetype-css"></i></div>
+            <div class="skill-icon" data-label="JavaScript"><i class="bi bi-filetype-js"></i></div>
+            <div class="skill-icon" data-label="Python"><i class="bi bi-filetype-py"></i></div>
+            <div class="skill-icon" data-label="C#"><i class="bi bi-file-earmark-code"></i></div>
+            <div class="skill-icon" data-label="Vue.js"><i class="bi bi-file-earmark-code"></i></div>
+            <div class="skill-icon" data-label="Node.js"><i class="bi bi-diagram-3"></i></div>
+            <div class="skill-icon" data-label="Bootstrap"><i class="bi bi-bootstrap"></i></div>
+            <div class="skill-icon" data-label="Git"><i class="bi bi-git"></i></div>
+            <div class="skill-icon" data-label="GitHub"><i class="bi bi-github"></i></div>
+            <div class="skill-icon" data-label="GitLab"><i class="bi bi-gitlab"></i></div>
+            <div class="skill-icon" data-label="VS Code"><i class="bi bi-code-slash"></i></div>
+            <div class="skill-icon" data-label="Figma"><i class="bi bi-vector-pen"></i></div>
+            <div class="skill-icon" data-label="Procreate"><i class="bi bi-palette-fill"></i></div>
+            <div class="skill-icon" data-label="Paint Tool Sai"><i class="bi bi-palette-fill"></i></div>
+            <div class="skill-icon" data-label="Clip Studio Paint"><i class="bi bi-palette-fill"></i></div>
+            <div class="skill-icon" data-label="Ms Paint"><i class="bi bi-palette-fill"></i></div>
+          </div>
+        </div>
+        <div class="pb-2">
+          <h2 class="section-title">Certifications</h2>
+          <h3 class="section-title">Professional Scrum Master I</h3>
+          <h3 class="section-title">Google User Experience/User Design Certification</h3>
+          <h3 class="section-title">Idaho Food Safety Certification</h3>
+        </div>
+      </main>
     </div>
     <footer class="footer py-1"><!--footer----------------------------------------------------------------->
       <div class="container-fluid d-flex justify-content-between align-items-center px-3">
@@ -138,7 +188,6 @@
     
         <p id="datetime" class="mb-0"></p>
       </div>
-    </footer>
     </footer>
   </body>
 </html>
